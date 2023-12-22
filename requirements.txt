@@ -1,3 +1,4 @@
 Flask
 OpsAi
 requests
+flask-cors
