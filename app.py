@@ -7,7 +7,7 @@ app = Flask(__name__)
 def receive_message():
     data = request.get_json()
     recv = data.get('message', '')
-    #req = Ai(query=recv)
-    #res = req.chat()
-    response_data = {'status': 'success', 'message': recv}
+    req = Ai(query=recv)
+    res = req.chat()
+    response_data = {'status': 'success', 'message': res}
     return jsonify(response_data)
