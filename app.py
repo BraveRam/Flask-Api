@@ -6,8 +6,8 @@ app = Flask(__name__)
 @app.route('/ask', methods=['POST'])
 def receive_message():
     data = request.get_json()
-    received_message = data.get('message', '')
-    req = Ai(query=received_message)
-    res = req.chat()
-    response_data = {'status': 'success', 'message': res}
+    recv = data.get('message', '')
+    #req = Ai(query=recv)
+    #res = req.chat()
+    response_data = {'status': 'success', 'message': recv}
     return jsonify(response_data)
