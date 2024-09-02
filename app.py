@@ -5,6 +5,8 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+#AI
+
 @app.route('/ask', methods=['POST'])
 def receive_message():
     data = request.get_json()
